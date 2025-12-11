@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learn HTML - Hall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .html-tutorial {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2em;
+    }
+    
+    .tutorial-section {
+      background: #ffffff;
+      padding: 2em;
+      margin-bottom: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(65,103,136,0.15);
+    }
+    
+    .tutorial-section h2 {
+      color: #416788;
+      border-bottom: 3px solid #5171A5;
+      padding-bottom: 0.5em;
+      margin-bottom: 1em;
+    }
+    
+    .tutorial-section h3 {
+      color: #5171A5;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    
+    .code-example {
+      background-color: #f4f4f4;
+      border-left: 4px solid #416788;
+      padding: 1em;
+      margin: 1em 0;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+      border-radius: 4px;
+    }
+    
+    .code-example code {
+      color: #191716;
+      display: block;
+      white-space: pre;
+    }
+    
+    .tag-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1em;
+      margin: 1em 0;
+    }
+    
+    .tag-card {
+      background: #D9BBF9;
+      padding: 1em;
+      border-radius: 8px;
+      border-left: 4px solid #416788;
+    }
+    
+    .tag-card strong {
+      color: #416788;
+      font-size: 1.1em;
+    }
+    
+    .tip-box {
+      background-color: #5171A5;
+      color: white;
+      padding: 1.5em;
+      border-radius: 8px;
+      margin: 1.5em 0;
+    }
+    
+    .tip-box h3 {
+      color: #D9BBF9;
+      margin-top: 0;
+    }
+    
+    .example-output {
+      background: white;
+      border: 2px solid #416788;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 4px;
+    }
+    
+    .back-link {
+      display: inline-block;
+      background-color: #416788;
+      color: #D9BBF9;
+      padding: 0.8em 1.5em;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 2em;
+      transition: background-color 0.3s;
+    }
+    
+    .back-link:hover {
+      background-color: #5171A5;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="html-page.html">HTML</a>
+        <a href="#css">CSS</a>
+        <img src="images/name.png" alt="Name Logo">
+    </div>
+    
+    <div class="homeheader">
+        <h1 style="color: white; font-size: 3em;">Learn HTML Basics</h1>
+    </div>
+
+    <div class="html-tutorial">
+        <!-- Introduction Section -->
+        <section class="tutorial-section">
+            <h2>What is HTML?</h2>
+            <p>HTML stands for <strong>HyperText Markup Language</strong>. It's the standard language used to create and structure content on the web. Think of HTML as the skeleton of a website - it provides the structure and content, while CSS (which you'll learn later) makes it look pretty!</p>
+            <p>HTML uses "tags" to mark up different parts of your content, telling the browser how to display text, images, links, and other elements.</p>
+        </section>
+
+        <!-- Basic Structure Section -->
+        <section class="tutorial-section">
+            <h2>Basic HTML Structure</h2>
+            <p>Every HTML document follows a basic structure. Here's what a simple HTML page looks like:</p>
+            
+            <div class="code-example">
+                <code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+            </div>
+            
+            <h3>Breaking It Down:</h3>
+            <ul>
+                <li><strong>&lt;!DOCTYPE html&gt;</strong> - Tells the browser this is an HTML5 document</li>
+                <li><strong>&lt;html&gt;</strong> - The root element that contains all other elements</li>
+                <li><strong>&lt;head&gt;</strong> - Contains metadata about the document (title, character set, etc.)</li>
+                <li><strong>&lt;body&gt;</strong> - Contains all the visible content of the webpage</li>
+            </ul>
+        </section>
+
+        <!-- Common Tags Section -->
+        <section class="tutorial-section">
+            <h2>Common HTML Tags</h2>
+            <p>Here are the most important HTML tags you'll use regularly:</p>
+            
+            <div class="tag-list">
+                <div class="tag-card">
+                    <strong>&lt;h1&gt; to &lt;h6&gt;</strong>
+                    <p>Headings - h1 is largest, h6 is smallest</p>
+                </div>
+                <div class="tag-card">
+                    <strong>&lt;p&gt;</strong>
+                    <p>Paragraph - for blocks of text</p>
+                </div>
+                <div class="tag-card">
+                    <strong>&lt;a&gt;</strong>
+                    <p>Anchor - creates hyperlinks</p>
+                </div>
+                <div class="tag-card">
+                    <strong>&lt;img&gt;</strong>
+                    <p>Image - displays pictures</p>
+                </div>
+                <div class="tag-card">
+                    <strong>&lt;div&gt;</strong>
+                    <p>Division - a container for grouping elements</p>
+                </div>
+                <div class="tag-card">
+                    <strong>&lt;ul&gt; & &lt;ol&gt;</strong>
+                    <p>Lists - unordered (bullets) and ordered (numbered)</p>
+                </div>
+                <div class="tag-card">
+                    <strong>&lt;strong&gt;</strong>
+                    <p>Makes text bold and important</p>
+                </div>
+                <div class="tag-card">
+                    <strong>&lt;em&gt;</strong>
+                    <p>Emphasizes text (usually italic)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practical Examples Section -->
+        <section class="tutorial-section">
+            <h2>Practical Examples</h2>
+            
+            <h3>Creating a Link</h3>
+            <div class="code-example">
+                <code>&lt;a href="https://www.google.com"&gt;Click here to visit Google&lt;/a&gt;</code>
+            </div>
+            <div class="example-output">
+                <strong>Output:</strong> <a href="https://www.google.com">Click here to visit Google</a>
+            </div>
+            
+            <h3>Adding an Image</h3>
+            <div class="code-example">
+                <code>&lt;img src="images/photo.jpg" alt="Description of image"&gt;</code>
+            </div>
+            <p><strong>Note:</strong> The "alt" attribute describes the image for accessibility and appears if the image fails to load.</p>
+            
+            <h3>Creating a List</h3>
+            <div class="code-example">
+                <code>&lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;</code>
+            </div>
+            <div class="example-output">
+                <strong>Output:</strong>
+                <ul>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- HTML Attributes Section -->
+        <section class="tutorial-section">
+            <h2>HTML Attributes</h2>
+            <p>Attributes provide additional information about HTML elements. They are always included in the opening tag and usually come in name/value pairs like <code>name="value"</code>.</p>
+            
+            <h3>Common Attributes:</h3>
+            <ul>
+                <li><strong>href</strong> - Specifies the URL for links (&lt;a&gt; tags)</li>
+                <li><strong>src</strong> - Specifies the source file for images, scripts, etc.</li>
+                <li><strong>alt</strong> - Provides alternative text for images</li>
+                <li><strong>class</strong> - Assigns a class name for CSS styling</li>
+                <li><strong>id</strong> - Gives a unique identifier to an element</li>
+                <li><strong>style</strong> - Applies inline CSS styling</li>
+            </ul>
+            
+            <div class="code-example">
+                <code>&lt;img src="photo.jpg" alt="My photo" class="profile-pic" id="main-image"&gt;</code>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <div class="tip-box">
+            <h3>💡 Important Tips for Beginners</h3>
+            <ul>
+                <li><strong>Always close your tags:</strong> Most HTML tags need a closing tag. For example: &lt;p&gt;text&lt;/p&gt;</li>
+                <li><strong>Indent your code:</strong> Proper indentation makes your HTML much easier to read</li>
+                <li><strong>Use semantic tags:</strong> Tags like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt; make your code more meaningful</li>
+                <li><strong>Validate your HTML:</strong> Use tools like the W3C Validator to check for errors</li>
+                <li><strong>Practice regularly:</strong> The best way to learn HTML is to build actual web pages!</li>
+            </ul>
+        </div>
+
+        <!-- Next Steps Section -->
+        <section class="tutorial-section">
+            <h2>Next Steps in Your HTML Journey</h2>
+            <p>Now that you understand the basics of HTML, here are some topics to explore next:</p>
+            <ol>
+                <li><strong>Semantic HTML</strong> - Using meaningful tags like &lt;article&gt;, &lt;section&gt;, &lt;nav&gt;</li>
+                <li><strong>Forms</strong> - Creating interactive forms with input fields, buttons, and more</li>
+                <li><strong>Tables</strong> - Organizing data in rows and columns</li>
+                <li><strong>HTML5 Features</strong> - Video, audio, canvas, and other modern elements</li>
+                <li><strong>Accessibility</strong> - Making your websites usable for everyone</li>
+            </ol>
+            <p>Remember, HTML works hand-in-hand with CSS (for styling) and JavaScript (for interactivity) to create complete, modern websites!</p>
+        </section>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-left">
+            <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="html-page.html">HTML</a>
+            <a href="#css">CSS</a>
+            </div>
+            <div class="contact">
+            <p>Email: <a href="mailto:hall25030@byui.edu">hall25030@byui.edu</a></p>
+            <p>Phone: <a href="tel:+15098085774">(509)808-5774</a></p>
+            </div>
+        </div>
+        <div class="footer-logo">
+            <img src="images/websiteimage.png" alt="Website Logo">
+        </div>
+        <div class="social">
+            <a href="https://discord.com">
+            Discord <br>
+            <img src="images/discord.png" alt="Discord">
+            </a>
+            <a href="https://instagram.com">
+            Instagram <br>
+            <img src="images/insta.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
